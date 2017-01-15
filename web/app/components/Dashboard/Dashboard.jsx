@@ -76,26 +76,23 @@ class Dashboard extends React.Component {
         let accountCount = linkedAccounts.size + myIgnoredAccounts.size;
 
         let featuredMarkets = [
+            ["OPEN.BTC", "OPEN.GRC"],
             ["OPEN.GRC", "CNY"],
             ["OPEN.GRC", "USD"],
             ["OPEN.GRC", "GBP"],
             ["OPEN.BTC", "BTS", false],
             ["OPEN.GRC", "BTS", false],
-            ["OPEN.BTC", "OPEN.GRC"],
             ["OPEN.GRC", "OPEN.STEEM"],
-            ["OPEN.GRC", "ICOO"],
             ["OPEN.GRC", "BLOCKPAY"],
+            ["OPEN.GRC", "ICOO"],
             ["OPEN.GRC", "OBITS"],
-            ["OPEN.GRC", "GOLD"],
-            ["OPEN.GRC", "SILVER"],
-            ["OPEN.GRC", "OPEN.HEAT"],
-            ["OPEN.BTC", "CRYPTOCEEDS"],
-            ["OPEN.BTC", "TASKMANAGER"],
             ["OPEN.BTC", "OPEN.ETH"],
             ["OPEN.BTC", "OPEN.SBD"],
-            ["OPEN.BTC", "OPEN.STEEM"],
-            // ["BTS", "SILVER"]
-            // ["BTS", "EUR"]
+            ["OPEN.GRC", "OPEN.HEAT"],
+            ["OPEN.BTC", "TASKMANAGER"],
+            ["OPEN.BTC", "CRYPTOCEEDS"],
+            ["OPEN.GRC", "GOLD"],
+            ["OPEN.GRC", "SILVER"]
         ];
 
         let newAssets = [
