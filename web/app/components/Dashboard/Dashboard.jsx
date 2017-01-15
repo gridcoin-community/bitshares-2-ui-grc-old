@@ -76,25 +76,30 @@ class Dashboard extends React.Component {
         let accountCount = linkedAccounts.size + myIgnoredAccounts.size;
 
         let featuredMarkets = [
-            ["BTS", "PEERPLAYS"],
-            ["BTS", "CNY"],
-            ["BTC", "BTS", false],
+            ["OPEN.GRC", "CNY"],
+            ["OPEN.GRC", "USD"],
+            ["OPEN.GRC", "GBP"],
+            ["OPEN.BTC", "BTS", false],
+            ["OPEN.GRC", "BTS", false],
+            ["OPEN.BTC", "OPEN.GRC"],
+            ["OPEN.GRC", "OPEN.STEEM"],
+            ["OPEN.GRC", "ICOO"],
+            ["OPEN.GRC", "BLOCKPAY"],
+            ["OPEN.GRC", "OBITS"],
+            ["OPEN.GRC", "GOLD"],
+            ["OPEN.GRC", "SILVER"],
+            ["OPEN.GRC", "OPEN.HEAT"],
+            ["OPEN.BTC", "CRYPTOCEEDS"],
+            ["OPEN.BTC", "TASKMANAGER"],
+            ["OPEN.BTC", "OPEN.ETH"],
+            ["OPEN.BTC", "OPEN.SBD"],
             ["OPEN.BTC", "OPEN.STEEM"],
-            ["BTS", "ICOO"],
-            ["BTS", "BLOCKPAY"],
-            ["BTS", "OBITS"],
-            ["BTS", "USD"],
-            ["BTS", "GOLD"],
-            ["BTS", "SILVER"],
-            ["OPEN.BTC", "OPEN.ETH", false],
-            ["OPEN.BTC", "OPEN.DGD", false],
             // ["BTS", "SILVER"]
             // ["BTS", "EUR"]
         ];
 
         let newAssets = [
-            "OPEN.DAO",
-            "OPEN.LISK"
+            "OPEN.GRC"
         ];
 
         let markets = featuredMarkets.map((pair, index) => {
