@@ -86,6 +86,7 @@ class Dashboard extends React.Component {
             ["OPEN.GRC", "BLOCKPAY"],
             ["OPEN.GRC", "ICOO"],
             ["OPEN.GRC", "OBITS"],
+            ["OPEN.GRC", "PEERPLAYS"],
             ["OPEN.BTC", "OPEN.ETH"],
             ["OPEN.BTC", "OPEN.SBD"],
             ["OPEN.GRC", "OPEN.HEAT"],
