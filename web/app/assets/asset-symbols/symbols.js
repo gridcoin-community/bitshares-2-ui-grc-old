@@ -3,6 +3,7 @@ require("file-loader?name=asset-symbols/[name].png!./bts.png");
 
 // BitAssets
 require("file-loader?name=asset-symbols/[name].png!./usd.png");
+require("file-loader?name=asset-symbols/[name].png!./gbp.png");
 require("file-loader?name=asset-symbols/[name].png!./eur.png");
 require("file-loader?name=asset-symbols/[name].png!./cny.png");
 require("file-loader?name=asset-symbols/[name].png!./gold.png");
@@ -24,6 +25,7 @@ require("file-loader?name=asset-symbols/[name].png!./blockpay.png");
 require("file-loader?name=asset-symbols/[name].png!./dash.png");
 require("file-loader?name=asset-symbols/[name].png!./eurt.png");
 require("file-loader?name=asset-symbols/[name].png!./game.png");
+require("file-loader?name=asset-symbols/[name].png!./kapital.png");
 require("file-loader?name=asset-symbols/[name].png!./grc.png");
 require("file-loader?name=asset-symbols/[name].png!./gridcoin.png");
 require("file-loader?name=asset-symbols/[name].png!./sbd.png");

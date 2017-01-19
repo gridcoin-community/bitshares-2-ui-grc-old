@@ -182,6 +182,7 @@ class Header extends React.Component {
 
         // Account selector: Only active inside the exchange
         let accountsDropDown = null;
+        let grcDropDown = null;
 
         if (currentAccount) {
 
@@ -240,6 +241,22 @@ class Header extends React.Component {
                             </ul>
                         </ActionSheet.Content>
                     </ActionSheet>);
+
+                grcDropDown = (
+                    <ActionSheet>
+                        <ActionSheet.Button title="">
+                            <a style={{padding: "1rem"}} className="button">
+                                &nbsp;GRC Links &nbsp;
+                                <Icon className="icon-14px" name="chevron-down"/>
+                            </a>
+                        </ActionSheet.Button>
+                        <ActionSheet.Content >
+                            <ul className="no-first-element-top-border">
+                                <li><a href="https://www.gridcoin.us">Gridcoin.US</a></li>
+                                <li><a href="https://www.gridcoinstats.eu">GridcoinStats.EU</a></li>
+                            </ul>
+                        </ActionSheet.Content>
+                    </ActionSheet>);
             }
         }
 
@@ -269,7 +286,9 @@ class Header extends React.Component {
                 <div className="grid-block show-for-medium shrink">
                     <div className="grp-menu-items-group header-right-menu">
                         {walletBalance}
-
+                        <div className="grid-block shrink overflow-visible account-drop-down">
+                            {accountsDropDown}
+                        </div>
                         <div className="grid-block shrink overflow-visible account-drop-down">
                             {accountsDropDown}
                         </div>
