@@ -1,6 +1,5 @@
 import React from "react";
-import {PropTypes} from "react-router";
-import {reduce, zipObject} from "lodash"
+import {reduce, zipObject} from "lodash";
 import counterpart from "counterpart";
 import utils from "common/utils";
 
@@ -29,7 +28,7 @@ function adjust_links(str) {
         if (text.indexOf("#/") === 0) return `<a href="${text}" onclick="_onClickLink(event)"`;
         if (text.indexOf("http") === 0) return `<a href="${text}" target="_blank"`;
         let page = endsWith(text, ".md") ? text.substr(0, text.length - 3) : text;
-        let res = `<a href="/#/help/${page}" onclick="_onClickLink(event)"`;
+        let res = `<a href="${__HASH_HISTORY__ ? "#" : ""}/help/${page}" onclick="_onClickLink(event)"`;
         return res;
     });
 }
@@ -44,8 +43,8 @@ class HelpContent extends React.Component {
     };
 
     static contextTypes = {
-        history: PropTypes.history
-    };
+        router: React.PropTypes.object.isRequired
+    }
 
     constructor(props) {
         super(props);
@@ -74,11 +73,10 @@ class HelpContent extends React.Component {
 
     onClickLink(e) {
         e.preventDefault();
-        console.dir(e.target);
         let path = e.target.hash.split("/").filter(p => p && p !== "#");
         if (path.length === 0) return false;
         let route = "/" + path.join("/");
-        this.context.history.pushState(null, route);
+        this.context.router.push(route);
         return false;
     }
 

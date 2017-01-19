@@ -1,12 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Immutable from "immutable";
 import DashboardList from "./DashboardList";
-import RecentTransactions from "../Account/RecentTransactions";
+import { RecentTransactions } from "../Account/RecentTransactions";
 import Translate from "react-translate-component";
-import ps from "perfect-scrollbar";
-import AssetName from "../Utility/AssetName";
-import assetUtils from "common/asset_utils";
 import MarketCard from "./MarketCard";
 
 class Dashboard extends React.Component {
@@ -16,7 +12,6 @@ class Dashboard extends React.Component {
         super();
         this.state = {
             width: null,
-            height: null,
             showIgnored: false
         };
 
@@ -24,9 +19,6 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        // let c = ReactDOM.findDOMNode(this.refs.container);
-        // ps.initialize(c);
-
         this._setDimensions();
 
         window.addEventListener("resize", this._setDimensions, false);
@@ -37,15 +29,9 @@ class Dashboard extends React.Component {
             nextProps.linkedAccounts !== this.props.linkedAccounts ||
             nextProps.ignoredAccounts !== this.props.ignoredAccounts ||
             nextState.width !== this.state.width ||
-            nextState.height !== this.state.height ||
             nextState.showIgnored !== this.state.showIgnored
         );
     }
-
-    // componentDidUpdate() {
-    //     let c = ReactDOM.findDOMNode(this.refs.container);
-    //     ps.update(c);
-    // }
 
     componentWillUnmount() {
         window.removeEventListener("resize", this._setDimensions, false);
@@ -53,10 +39,9 @@ class Dashboard extends React.Component {
 
     _setDimensions() {
         let width = window.innerWidth;
-        let height = this.refs.wrapper.offsetHeight;
 
-        if (width !== this.state.width || height !== this.state.height) {
-            this.setState({width, height});
+        if (width !== this.state.width) {
+            this.setState({width});
         }
     }
 
@@ -68,7 +53,7 @@ class Dashboard extends React.Component {
 
     render() {
         let {linkedAccounts, myIgnoredAccounts} = this.props;
-        let {width, height, showIgnored} = this.state;
+        let {width, showIgnored} = this.state;
 
         let names = linkedAccounts.toArray().sort();
         let ignored = myIgnoredAccounts.toArray().sort();
@@ -76,28 +61,31 @@ class Dashboard extends React.Component {
         let accountCount = linkedAccounts.size + myIgnoredAccounts.size;
 
         let featuredMarkets = [
-            ["OPEN.BTC", "OPEN.GRC"],
             ["OPEN.GRC", "CNY"],
             ["OPEN.GRC", "USD"],
             ["OPEN.GRC", "GBP"],
             ["OPEN.BTC", "BTS", false],
             ["OPEN.GRC", "BTS", false],
+            ["OPEN.BTC", "OPEN.GRC"],
             ["OPEN.GRC", "OPEN.STEEM"],
-            ["OPEN.GRC", "BLOCKPAY"],
-            ["OPEN.GRC", "ICOO"],
-            ["OPEN.GRC", "OBITS"],
-            ["OPEN.GRC", "PEERPLAYS"],
             ["OPEN.GRC", "OPEN.ETH"],
             ["OPEN.GRC", "OPEN.SBD"],
             ["OPEN.GRC", "OPEN.HEAT"],
-            ["OPEN.GRC", "TASKMANAGER"],
-            ["OPEN.GRC", "CRYPTOCEEDS"],
+            ["OPEN.GRC", "OPEN.MKR"],
+            ["OPEN.GRC", "ICOO"],
+            ["OPEN.GRC", "BLOCKPAY"],
+            ["OPEN.GRC", "PEERPLAYS"],
+            ["OPEN.GRC", "OBITS"],
             ["OPEN.GRC", "GOLD"],
-            ["OPEN.GRC", "SILVER"]
+            ["OPEN.GRC", "SILVER"],
+            ["OPEN.GRC", "GRIDCOIN"],
+            ["OPEN.GRC", "TASKMANAGER"]
         ];
 
         let newAssets = [
-            "OPEN.GRC"
+            "OPEN.DAO",
+            "OPEN.GRC",
+            "OPEN.LISK"
         ];
 
         let markets = featuredMarkets.map((pair, index) => {
@@ -141,7 +129,7 @@ class Dashboard extends React.Component {
                                     <tbody>
                                         <tr>
                                             <td colSpan={width < 750 ? "3" : "4"} style={{textAlign: "right"}}>
-                                                <div onClick={this._onToggleIgnored.bind(this)}className="button outline">
+                                                <div onClick={this._onToggleIgnored.bind(this)} className="button outline">
                                                     <Translate content={`account.${ showIgnored ? "hide_ignored" : "show_ignored" }`} />
                                                 </div>
                                             </td>
