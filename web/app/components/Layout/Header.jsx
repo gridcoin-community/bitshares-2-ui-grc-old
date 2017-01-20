@@ -183,6 +183,7 @@ class Header extends React.Component {
         // Account selector: Only active inside the exchange
         let accountsDropDown = null;
         let grcDropDown = null;
+        let btsDropDown = null;
 
         if (currentAccount) {
 
@@ -252,8 +253,49 @@ class Header extends React.Component {
                         </ActionSheet.Button>
                         <ActionSheet.Content >
                             <ul className="no-first-element-top-border">
-                                <li><a href="https://www.gridcoin.us">Gridcoin.US</a></li>
-                                <li><a href="https://www.gridcoinstats.eu">GridcoinStats.EU</a></li>
+                                <li role="presentation">Official Links</li>
+                                    <li><a href="https://www.gridcoin.us">Gridcoin.us</a></li>
+                                    <li><a href="https://twitter.com/GridcoinNetwork">Twitter</a></li>
+                                    <li><a href="https://github.com/gridcoin/Gridcoin-Research">GitHub</a></li>
+                                    <li><a href="https://cryptocointalk.com/forum/464-gridcoin-grc/">Forums</a></li>
+                                    <li><a href="https://soundcloud.com/gridcoin-community-hangouts">Hangouts</a></li>
+                                    <li><a href="https://steemit.com/active/gridcoin">Steemit</a></li>
+                                    <li><a href="https://gridcoin.tumblr.com/">Tumblr</a></li>
+                                    <li><a href="http://www.reddit.com/r/gridcoin">Reddit</a></li>
+                                <li role="presentation">Explorers</li>
+                                    <li><a href="https://www.gridcoinstats.eu">GridcoinStats</a></li>
+                                    <li><a href="http://gridresearchcorp.com/gridcoin/">GridResearchCorp</a></li>
+                                    <li><a href="http://explorer.gridcoin.asia/">Sepulcher's explorer</a></li>
+                                <li role="presentation">Stats</li>
+                                    <li><a href="http://boincstats.com/en/stats/-1/team/detail/118094994/projectList">Boincstats</a></li>
+                                    <li><a href="https://coinmarketcap.com/currencies/gridcoin/">Coinmarketcap</a></li>
+                                    <li><a href="http://www.coincap.io/GRC">Coincap</a></li>
+                                    <li><a href="https://www.coingecko.com/en/coins/gridcoin-research">Coingecko</a></li>
+                            </ul>
+                        </ActionSheet.Content>
+                    </ActionSheet>);
+
+                btsDropDown = (
+                    <ActionSheet>
+                        <ActionSheet.Button title="">
+                            <a style={{padding: "1rem"}} className="button">
+                                &nbsp;BTS Links &nbsp;
+                                <Icon className="icon-14px" name="chevron-down"/>
+                            </a>
+                        </ActionSheet.Button>
+                        <ActionSheet.Content >
+                            <ul className="no-first-element-top-border">
+                                <li role="presentation">Official Links</li>
+                                    <li><a href="https://bitshares.org/">Bitshares website</a></li>
+                                    <li><a href="https://bitsharestalk.org/">Bitshares forum</a></li>
+                                    <li><a href="https://soundcloud.com/beyond-bitcoin-hangouts">BeyondBitcoin</a></li>
+                                    <li><a href="https://www.cryptofresh.com/">BlockExplorer</a></li>
+                                <li role="presentation">BTS Web Wallets</li>
+                                    <li><a href="https://bitshares.openledger.info/#/market/OPEN.GRC_OPEN.BTC">OpenLedger</a></li>
+                                    <li><a href="https://bit.btsabc.org/#/market/OPEN.GRC_OPEN.BTC">BTSABC</a></li>
+                                    <li><a href="https://btsbots.com/a/OPEN.GRC">BTSBOTS</a></li>
+                                    <li><a href="https://secure.freedomledger.com">FreedomLedger</a></li>
+                                    <li><a href="https://altcap.io">AltCap</a></li>
                             </ul>
                         </ActionSheet.Content>
                     </ActionSheet>);
@@ -289,6 +331,11 @@ class Header extends React.Component {
                         <div className="grid-block shrink overflow-visible account-drop-down">
                             {grcDropDown}
                         </div>
+
+                        <div className="grid-block shrink overflow-visible account-drop-down">
+                            {btsDropDown}
+                        </div>
+
                         <div className="grid-block shrink overflow-visible account-drop-down">
                             {accountsDropDown}
                         </div>
