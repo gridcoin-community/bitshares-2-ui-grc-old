@@ -97,6 +97,7 @@ class SettingsStore {
                 {translate: "no"}
             ],
             themes: [
+                "greenTheme",
                 "darkTheme",
                 "lightTheme",
                 "olDarkTheme"

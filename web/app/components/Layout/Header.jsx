@@ -253,7 +253,7 @@ class Header extends React.Component {
                         </ActionSheet.Button>
                         <ActionSheet.Content >
                             <ul className="no-first-element-top-border">
-                                <li role="presentation">Official Links</li>
+                                <li role="presentation"><b>Official Links</b></li>
                                     <li><a href="https://www.gridcoin.us">Gridcoin.us</a></li>
                                     <li><a href="https://twitter.com/GridcoinNetwork">Twitter</a></li>
                                     <li><a href="https://github.com/gridcoin/Gridcoin-Research">GitHub</a></li>
@@ -262,11 +262,11 @@ class Header extends React.Component {
                                     <li><a href="https://steemit.com/active/gridcoin">Steemit</a></li>
                                     <li><a href="https://gridcoin.tumblr.com/">Tumblr</a></li>
                                     <li><a href="http://www.reddit.com/r/gridcoin">Reddit</a></li>
-                                <li role="presentation">Explorers</li>
+                                <li role="presentation"><b>Explorers</b></li>
                                     <li><a href="https://www.gridcoinstats.eu">GridcoinStats</a></li>
                                     <li><a href="http://gridresearchcorp.com/gridcoin/">GridResearchCorp</a></li>
                                     <li><a href="http://explorer.gridcoin.asia/">Sepulcher's explorer</a></li>
-                                <li role="presentation">Stats</li>
+                                <li role="presentation"><b>Stats</b></li>
                                     <li><a href="http://boincstats.com/en/stats/-1/team/detail/118094994/projectList">Boincstats</a></li>
                                     <li><a href="https://coinmarketcap.com/currencies/gridcoin/">Coinmarketcap</a></li>
                                     <li><a href="http://www.coincap.io/GRC">Coincap</a></li>
@@ -285,12 +285,12 @@ class Header extends React.Component {
                         </ActionSheet.Button>
                         <ActionSheet.Content >
                             <ul className="no-first-element-top-border">
-                                <li role="presentation">Official Links</li>
+                                <li role="presentation"><b>Official Links</b></li>
                                     <li><a href="https://bitshares.org/">Bitshares website</a></li>
                                     <li><a href="https://bitsharestalk.org/">Bitshares forum</a></li>
                                     <li><a href="https://soundcloud.com/beyond-bitcoin-hangouts">BeyondBitcoin</a></li>
                                     <li><a href="https://www.cryptofresh.com/">BlockExplorer</a></li>
-                                <li role="presentation">BTS Web Wallets</li>
+                                <li role="presentation"><b>BTS Web Wallets</b></li>
                                     <li><a href="https://bitshares.openledger.info/#/market/OPEN.GRC_OPEN.BTC">OpenLedger</a></li>
                                     <li><a href="https://bit.btsabc.org/#/market/OPEN.GRC_OPEN.BTC">BTSABC</a></li>
                                     <li><a href="https://btsbots.com/a/OPEN.GRC">BTSBOTS</a></li>
